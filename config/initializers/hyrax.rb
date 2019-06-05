@@ -34,10 +34,10 @@ Hyrax.config do |config|
   # config.temp_file_base = '/home/developer1'
 
   # Specify the form of hostpath to be used in Endnote exports
-  # config.persistent_hostpath = 'http://localhost/files/'
+  config.persistent_hostpath = 'https://digital.library.carleton.ca/'
 
   # If you have ffmpeg installed and want to transcode audio and video uncomment this line
-  config.enable_ffmpeg = false
+  config.enable_ffmpeg = true
 
   # Using the database noid minter was too slow when ingesting 1000s of objects (8s per transaction),
   # so switching to UUIDs for the MVP.
@@ -80,7 +80,7 @@ Hyrax.config do |config|
 
   # Location autocomplete uses geonames to search for named regions.
   # Specify the user for connecting to geonames:
-  config.geonames_username = Settings.geonames_username
+  config.geonames_username = carletonlibrary
 
   # Should the acceptance of the licence agreement be active (checkbox), or
   # implied when the save button is pressed? Set to true for active.
@@ -93,7 +93,7 @@ Hyrax.config do |config|
   # config.work_requires_files = true
 
   # Should a button with "Share my work" show on the front page to all users (even those not logged in)?
-  # config.display_share_button_when_not_logged_in = true
+  config.display_share_button_when_not_logged_in = false 
 
   # The user who runs batch jobs. Update this if you aren't using emails
   # config.batch_user_key = 'batchuser@example.com'
