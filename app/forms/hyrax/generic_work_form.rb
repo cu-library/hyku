@@ -6,5 +6,6 @@ module Hyrax
     self.model_class = ::GenericWork
     include HydraEditor::Form::Permissions
     self.terms += %i[resource_type]
+    self.required_fields = [:title, :creator, :license]
   end
 end
