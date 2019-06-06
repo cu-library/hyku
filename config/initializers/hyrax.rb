@@ -34,7 +34,7 @@ Hyrax.config do |config|
   # config.temp_file_base = '/home/developer1'
 
   # Specify the form of hostpath to be used in Endnote exports
-  config.persistent_hostpath = 'https://digital.library.carleton.ca/'
+  config.persistent_hostpath = 'https://digital.library.carleton.ca/files/'
 
   # If you have ffmpeg installed and want to transcode audio and video uncomment this line
   config.enable_ffmpeg = true
@@ -136,11 +136,11 @@ Hyrax.config do |config|
   # config.display_media_download_link = true
 
   # Options to control the file uploader
-  # config.uploader = {
-  #   limitConcurrentUploads: 6,
-  #   maxNumberOfFiles: 100,
-  #   maxFileSize: 500.megabytes
-  # }
+  config.uploader = {
+    limitConcurrentUploads: 6,
+    maxNumberOfFiles: 100,
+    maxFileSize: 4000.megabytes
+  }
 
   # Fedora import/export tool
   #
@@ -176,7 +176,7 @@ Hyrax.config do |config|
   
 end
 
-Date::DATE_FORMATS[:standard] = "%m/%d/%Y"
+Date::DATE_FORMATS[:standard] = "%Y-%m-%d"
 
 Qa::Authorities::Local.register_subauthority('subjects', 'Qa::Authorities::Local::TableBasedAuthority')
 Qa::Authorities::Local.register_subauthority('languages', 'Qa::Authorities::Local::TableBasedAuthority')
