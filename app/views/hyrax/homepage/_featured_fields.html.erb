@@ -1,0 +1,17 @@
+<div>
+  <div class="featured-item-title">
+    <span class="sr-only"><%= t('hyrax.homepage.featured_works.document.title_label') %></span>
+    <h3>
+      <%= link_to [main_app, featured] do %>
+        <%= render_thumbnail_tag(featured, {width: 120}, {suppress_link: true}) + featured.title.first %>
+      <% end %>
+    </h3>
+  </div>
+  <div class="featured-field featured-item-author">
+    <span class="featured-label">Resource Type:</span> <%= featured.resource_type.first %>
+  </div>
+  <div class="featured-field featured-item-keywords">
+    <span class="featured-label"><%= t('hyrax.homepage.featured_works.document.keyword_label') %>:</span> <%= link_to_facet_list(featured.keyword, 'keyword', t('hyrax.homepage.featured_works.document.keyword_missing')) %>
+  </div>
+</div>
+
